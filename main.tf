@@ -21,8 +21,7 @@ module "subnet" {
 
 module "compute_engine" {
   depends_on     = [module.subnet]
-  source         = "./modules/compute_engine"
+  source         = "./modules/gce"
   compute_name   = var.compute_name
   subnet_name_01 = var.subnet_name_01
-  region         = var.region
 }
