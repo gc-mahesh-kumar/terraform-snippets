@@ -14,6 +14,6 @@
 #   value = google_compute_instance.default.network
 # }
 
-# output "vm_machine_type" {
-#   value = google_compute_instance.default.machine_type
-# }
+output "vm_machine_type" {
+  value = google_compute_instance.default.machine_type
+}
