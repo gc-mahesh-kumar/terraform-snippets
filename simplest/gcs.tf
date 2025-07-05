@@ -1,6 +1,9 @@
-resource "google_storage_bucket" "bucket_01" {
-  name = "gcs-concepts-tf-demo-01"
+provider "google" {
+  project = "cloud-custom-demos"
+}
+
+resource "google_storage_bucket" "bucket_02" {
+  name = "gcs-concepts-tf-demo-02"
   location = "us-central1"
   storage_class = "NEARLINE"
-  project = "cloud-custom-demos"
 }
