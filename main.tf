@@ -1,6 +1,18 @@
 module "gcs_bucket" {
-  source            = "./modules/gcs"
-  gcs_bucket_name   = var.gcs_bucket_name
+  source              = "./modules/gcs"
+  gcs_bucket_name     = var.gcs_bucket_name
   gcs_bucket_location = var.gcs_bucket_location
-  gcs_bucket_class  = var.gcs_bucket_class
+  gcs_bucket_class    = var.gcs_bucket_class
+}
+
+module "vpc_network" {
+  source   = "./modules/vpc"
+  vpc_name = var.vpc_name
+}
+
+module "subnet" {
+  source         = "./modules/subnet"
+  subnet_name_01 = var.subnet_name_01
+  subnet_cidr_01 = var.subnet_cidr_01
+  region         = var.region
 }
