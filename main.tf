@@ -11,8 +11,10 @@ module "vpc_network" {
 }
 
 module "subnet" {
+  depends_on     = [module.vpc_network]
   source         = "./modules/subnet"
   subnet_name_01 = var.subnet_name_01
   subnet_cidr_01 = var.subnet_cidr_01
   region         = var.region
+  vpc_name       = var.vpc_name
 }
