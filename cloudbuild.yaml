@@ -9,7 +9,7 @@ steps:
 
 #Execution
 - name: 'hashicorp/terraform'
-  args: ['apply', '-auto-approve', '-destroy']
+  args: ['apply', '-auto-approve', '-var-file', 'dev.tfvars']
 
 options:
   logging: CLOUD_LOGGING_ONLY

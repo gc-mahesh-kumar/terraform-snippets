@@ -1,5 +1,5 @@
 resource "google_storage_bucket" "bucket_01" {
-  name          = "gcs-concepts-tf-demo-01"
-  location      = "us-central1"
+  name          = var.gcs_bucket_name
+  location      = var.gcs_bucket_location
   storage_class = "NEARLINE"
 }
