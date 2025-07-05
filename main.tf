@@ -25,3 +25,11 @@ module "compute_engine" {
   compute_name   = var.compute_name
   subnet_name_01 = var.subnet_name_01
 }
+
+output "vm_ip" {
+  value = module.compute_engine.vm_ip
+}
+
+output "vm_zone" {
+  value = module.compute_engine.vm_zone
+}
