@@ -1,5 +1,4 @@
-resource "google_compute_instance" "default" {
-  depends_on = [google_compute_subnetwork.default]
+resource "google_compute_instance" "default" {  
   name       = var.compute_name
   zone       = "us-central1-a"
   network_interface {
