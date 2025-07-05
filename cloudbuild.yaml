@@ -3,6 +3,11 @@ steps:
 - name: 'hashicorp/terraform'
   args: ['init']
 
+#Plan
+- name: 'hashicorp/terraform'
+  args: ['plan']
+
+#Execution
 - name: 'hashicorp/terraform'
   args: ['apply', '-auto-approve']
 
