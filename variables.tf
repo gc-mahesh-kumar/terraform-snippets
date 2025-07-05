@@ -28,3 +28,7 @@ variable "subnet_cidr_01" {
 variable "region" {
   default = "us-central1"
 }
+
+variable "compute_name" {
+  default = "compute-01"
+}
