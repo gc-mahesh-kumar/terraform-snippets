@@ -17,7 +17,7 @@ variable "vpc_name" {}
 
 
 variable "subnet_name_01" {
-  default     = "subnet_01"
+  default     = "subnet-01"
   description = "Name of the subnet"
 }
 
