@@ -5,7 +5,7 @@ steps:
 
 #Plan
 - name: 'hashicorp/terraform'
-  args: ['plan']
+  args: ['plan', '-var-file', 'dev.tfvars']
 
 #Execution
 - name: 'hashicorp/terraform'
